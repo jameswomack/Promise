@@ -10,6 +10,10 @@
 #import "NGPromise.h"
 
 @implementation NGAppDelegate
+{
+    NSTimer *_timer;
+    NSMutableArray *_colors;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -39,24 +43,30 @@
     self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
     
-    [self iterateColors];
-    
     viewController = nil;
+    
+    _colors = @[UIColor.redColor,UIColor.blueColor,UIColor.orangeColor].mutableCopy;
+    
+    _timer = [NSTimer scheduledTimerWithTimeInterval:.2f target:self selector:@selector(iterateColors:) userInfo:nil repeats:YES];
     
     NSLog(@"%@",@"Made window key");
     
     return YES;
 }
 
-- (void)iterateColors
-{
-    NSMutableArray *colors = @[UIColor.redColor,UIColor.blueColor,UIColor.orangeColor].mutableCopy;
-    
-    while (colors.count)
+- (void)iterateColors:(NSTimer *)timer
+{    
+    if (_colors.count)
     {
-        self.window.rootViewController.view.backgroundColor = colors.lastObject;
+        self.window.rootViewController.view.backgroundColor = _colors.lastObject;
         [self.window.rootViewController.view setNeedsDisplay];
-        [colors removeLastObject];
+        [_colors removeLastObject];
+    }
+    else
+    {
+        [_timer invalidate];
+        _timer = nil;
+        _colors = nil;
     }
 }
 
