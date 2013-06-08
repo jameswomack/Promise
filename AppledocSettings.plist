@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>--input</key>
+	<array>
+		<string>.</string>
+	</array>
+	<key>--project-name</key>
+	<string>Promise</string>
+	<key>--project-company</key>
+	<string>Noble Gesture</string>
+	<key>--company-id</key>
+	<string>com.nblgstr</string>
+	<key>--output</key>
+	<string>documentation</string>
+	<key>--publish-docset</key>
+	<true/>
+	<key>--docset-feed-url</key>
+	<string>http://nblgstr.com/promise/%DOCSETATOMFILENAME</string>
+	<key>--docset-package-url</key>
+	<string>http://nblgstr.com/promise/%DOCSETPACKAGEFILENAME</string>
+	<key>--docset-fallback-url</key>
+	<string>http://nblgstr.com/promise/</string>
+	<key>--no-repeat-first-par</key>
+	<true/>
+	<key>--create-html</key>
+	<true/>
+	<key>--verbose</key>
+	<integer>0</integer>
+	<key>--docset-atom-filename</key>
+	<string>Promise.atom</string>
+	<key>--keep-intermediate-files</key>
+	<true/>
+	<key>--ignore</key>
+	<array>
+		<string>Demo_iOS</string>
+		<string>Demo_OSX</string>
+		<string>.m</string>
+	</array>
+</dict>
+</plist>

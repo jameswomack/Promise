@@ -10,7 +10,7 @@
 
 @implementation NGPromise
 {
-    NGPromiseBlock _deliver;
+    NGPromiseBlock _deliverBlock;
     NGOperationBlock _operationBlock;
     dispatch_queue_t _backgroundQueue;
 }
@@ -22,9 +22,9 @@
     return promise;
 }
 
-- (void)deliver:(NGPromiseBlock)deliver
+- (void)deliver:(NGPromiseBlock)deliverBlock
 {
-    _deliver = deliver;
+    _deliverBlock = deliverBlock;
     _backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(_backgroundQueue, ^{
         [self perform];
@@ -36,7 +36,7 @@
     __block NGPromise *promise = self;
     NSObject *operationResult = _operationBlock();
     dispatch_async(dispatch_get_main_queue(), ^{
-        _deliver(operationResult);
+        _deliverBlock(operationResult);
         dispatch_async(_backgroundQueue, ^{
             promise = nil;
         });
