@@ -1,9 +1,13 @@
 # NGPromise
-## The drop-dead easiest Objective-C Promise class in the West... 
+## The drop-dead easiest Promise class in the West... 
 
-Hand-crafted in San Diego, Ca.
+Hand-crafted in [San Diego, Ca](http://en.wikipedia.org/wiki/North_Park,_San_Diego).
 
-## Example:
+## Raison d'etre
+
+In looking through the existing promise-like classes available via Github I felt they all overcomplicated the process by focusing on adherance to the JavaScript specification(s). IMHO the focus rather should be on ease-of-use for developers and to simply "promise" to perform a task in a non-blocking fashion and return the result as soon as the task has come to completion.
+
+## Example
 ```
 [[NGPromise make:^NSObject *{
   NSError *error;
