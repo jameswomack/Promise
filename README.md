@@ -39,4 +39,4 @@ And a demo of the Promise class for Mac OS X:
 ![Promise Demo—OSX Code](https://dl.dropboxusercontent.com/u/1925537/promise-demo_OSX_code.png)
 ![Promise Demo—OSX Window](https://dl.dropboxusercontent.com/u/1925537/promise-demo_OSX_window.png)
 
-Objective-C Promise Framework | Promise OS X | Promise iOS | Promise Class for iPhone | Promise Class for iPad
+Objective-C Promise Framework | Promise OS X | Promise iOS | Promise Class for iPhone | Promise Class for iPad | Simple Promises API
