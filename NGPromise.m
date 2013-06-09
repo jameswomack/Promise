@@ -4,6 +4,7 @@
 //
 //  Created by James Womack on 6/7/13.
 //  Copyright (c) 2013 Noble Gesture. All rights reserved.
+//  Created using  Xcode Version 4.6.2 (4H1003)
 //
 
 #import "NGPromise.h"
@@ -15,6 +16,7 @@
     dispatch_queue_t _backgroundQueue;
 }
 
+#pragma mark - Initialization and essential methods
 + (NGPromise *)make:(NGOperationBlock)operationBlock
 {
     NGPromise *promise = NGPromise.new;

@@ -4,6 +4,8 @@
 //
 //  Created by James Womack on 6/7/13.
 //  Copyright (c) 2013 Noble Gesture. All rights reserved.
+//  Created using  Xcode Version 4.6.2 (4H1003)
+//  Comments formatted for appledoc 2.1 (build 840)
 //
 
 #import <Foundation/Foundation.h>
